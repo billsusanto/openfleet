@@ -17,6 +17,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
     "@opencode-ai/plugin": "^1.0.191",
     "@opencode-ai/sdk": "^1.0.191"
   },
