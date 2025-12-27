@@ -8,6 +8,7 @@ export const OPENFLEET_DIR = path.join(homedir(), ".openfleet");
 
 export const PATHS = {
   root: OPENFLEET_DIR,
+  agentsMD: path.join(OPENFLEET_DIR, "AGENTS.md"),
   status: path.join(OPENFLEET_DIR, "status"),
   sessions: path.join(OPENFLEET_DIR, "sessions"),
   tasks: path.join(OPENFLEET_DIR, "tasks"),

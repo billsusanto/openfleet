@@ -1,11 +1,21 @@
+import { actorAgent } from "./actor";
 import { housekeepingAgent } from "./housekeeping";
 import { orchestratorAgent } from "./orchestrator";
 import { plannerAgent } from "./planner";
+import { readonlyOrchestratorAgent } from "./read-only";
+import { reflectorAgent } from "./reflector";
+import { reviewerAgent } from "./reviewer";
+import { scoutAgent } from "./scout";
 
 export const agents = {
-  openfleet: orchestratorAgent,
-  "Planner-Openfleet": plannerAgent,
-  housekeeping: housekeepingAgent,
+  "Zeus (Orchestrator)": orchestratorAgent,
+  "Hera (Read-only Orchestrator)": readonlyOrchestratorAgent,
+  "[Openfleet] Athena (Scout)": scoutAgent,
+  "[Openfleet] Apollo (Planner)": plannerAgent,
+  "[Openfleet] Hercules (Actor)": actorAgent,
+  "[Openfleet] Chiron (Reviewer)": reviewerAgent,
+  "[Openfleet] Mnemosyne (Reflector)": reflectorAgent,
+  "[Openfleet] Hermes (Housekeeping)": housekeepingAgent,
 };
 
 export function configureAgents(config: { agent?: Record<string, unknown> }) {
@@ -19,8 +29,6 @@ export function configureAgents(config: { agent?: Record<string, unknown> }) {
 
   config.agent = {
     ...nonOpenfleetAgents,
-    openfleet: orchestratorAgent,
-    "Planner-Openfleet": plannerAgent,
-    housekeeping: housekeepingAgent,
+    ...agents,
   };
 }

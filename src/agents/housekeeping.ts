@@ -97,9 +97,9 @@ Be efficient and thorough. You're keeping the workspace clean!
 `;
 
 export const housekeepingAgent: AgentConfig = {
-  description: `Background maintenance agent for ${OPENFLEET_DIR} directory`,
+  description: `Hermes - Housekeeping`,
   mode: "subagent",
   model: smallModel,
   prompt: HOUSEKEEPING_PROMPT,
-  color: "#90EE90",
+  color: "#AA6138",
 };

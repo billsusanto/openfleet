@@ -38,7 +38,7 @@ const OpenfleetPlugin: Plugin = async (ctx) => {
 async function showFleetToast(ctx: PluginInput): Promise<void> {
   const stopSpinner = showSpinnerToast(ctx, {
     title: "⛴️  Openfleet",
-    message: "Admiral Kunkka is now steering opencode.",
+    message: "The Openfleet plugin is now at play.",
     variant: "info",
   });
 
