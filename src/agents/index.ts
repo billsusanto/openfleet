@@ -7,15 +7,26 @@ import { reflectorAgent } from "./reflector";
 import { reviewerAgent } from "./reviewer";
 import { scoutAgent } from "./scout";
 
+export const AGENT_NAMES = {
+  ORCHESTRATOR: "Zeus (Orchestrator)",
+  READ_ONLY_ORCHESTRATOR: "Hera (Read-only Orchestrator)",
+  SCOUT: "[Openfleet] Athena (Scout)",
+  PLANNER: "[Openfleet] Apollo (Planner)",
+  ACTOR: "[Openfleet] Hercules (Actor)",
+  REVIEWER: "[Openfleet] Chiron (Reviewer)",
+  REFLECTOR: "[Openfleet] Mnemosyne (Reflector)",
+  HOUSEKEEPING: "[Openfleet] Hermes (Housekeeping)",
+} as const;
+
 export const agents = {
-  "Zeus (Orchestrator)": orchestratorAgent,
-  "Hera (Read-only Orchestrator)": readonlyOrchestratorAgent,
-  "[Openfleet] Athena (Scout)": scoutAgent,
-  "[Openfleet] Apollo (Planner)": plannerAgent,
-  "[Openfleet] Hercules (Actor)": actorAgent,
-  "[Openfleet] Chiron (Reviewer)": reviewerAgent,
-  "[Openfleet] Mnemosyne (Reflector)": reflectorAgent,
-  "[Openfleet] Hermes (Housekeeping)": housekeepingAgent,
+  [AGENT_NAMES.ORCHESTRATOR]: orchestratorAgent,
+  [AGENT_NAMES.READ_ONLY_ORCHESTRATOR]: readonlyOrchestratorAgent,
+  [AGENT_NAMES.SCOUT]: scoutAgent,
+  [AGENT_NAMES.PLANNER]: plannerAgent,
+  [AGENT_NAMES.ACTOR]: actorAgent,
+  [AGENT_NAMES.REVIEWER]: reviewerAgent,
+  [AGENT_NAMES.REFLECTOR]: reflectorAgent,
+  [AGENT_NAMES.HOUSEKEEPING]: housekeepingAgent,
 };
 
 export function configureAgents(config: { agent?: Record<string, unknown> }) {

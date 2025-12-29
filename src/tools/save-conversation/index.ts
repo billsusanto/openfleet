@@ -5,6 +5,7 @@ import { tool } from "@opencode-ai/plugin";
 import type { PluginInput } from "@opencode-ai/plugin";
 import type { SessionMessagesResponse } from "@opencode-ai/sdk";
 
+import { AGENT_NAMES } from "../../agents";
 import { logger } from "../../logger";
 import { showSpinnerToast, showToast } from "../../utils/toast";
 import { getCurrentDate, getNextCounter } from "./counter";
@@ -197,7 +198,7 @@ Session Details:
     const { error: promptError } = await ctx.client.session.prompt({
       path: { id: childSession.id },
       body: {
-        agent: "housekeeping",
+        agent: AGENT_NAMES.HOUSEKEEPING,
         parts: [
           {
             type: "text",
