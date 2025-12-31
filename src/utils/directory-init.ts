@@ -15,6 +15,7 @@ export function initializeDirectories(): void {
     PATHS.sessions,
     PATHS.tasks,
     PATHS.planning,
+    PATHS.reviews,
     path.join(PATHS.docs, "architecture"),
     path.join(PATHS.docs, "specs"),
     path.join(PATHS.planning, "decisions"),

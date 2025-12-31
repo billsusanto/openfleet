@@ -15,6 +15,7 @@ export const PATHS = {
   planning: path.join(OPENFLEET_DIR, "planning"),
   docs: path.join(OPENFLEET_DIR, "docs"),
   archive: path.join(OPENFLEET_DIR, "archive"),
+  reviews: path.join(OPENFLEET_DIR, "reviews"),
 
   // Specific files
   statusFile: path.join(OPENFLEET_DIR, "status", "current.md"),

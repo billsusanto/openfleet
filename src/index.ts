@@ -3,6 +3,13 @@ import type { Plugin, PluginInput } from "@opencode-ai/plugin";
 import { configureAgents } from "./agents";
 import { sleep } from "./lib/utils";
 import { logger } from "./logger";
+import { startReviewServer } from "./review-server";
+import {
+  addReplyTool,
+  getReviewStatusTool,
+  requestReviewTool,
+  resolveCommentTool,
+} from "./tools/document-review";
 import { createSaveConversationTool } from "./tools/save-conversation";
 import { initializeDirectories } from "./utils/directory-init";
 import { showSpinnerToast } from "./utils/toast";
@@ -11,11 +18,23 @@ const OpenfleetPlugin: Plugin = async (ctx) => {
   logger.info("Plugin loaded");
 
   initializeDirectories();
+
+  try {
+    const serverUrl = await startReviewServer();
+    logger.info("Review server started", { url: serverUrl });
+  } catch (error) {
+    logger.error("Failed to start review server", error);
+  }
+
   const saveConversation = createSaveConversationTool(ctx);
 
   return {
     tool: {
       save_conversation: saveConversation,
+      request_review: requestReviewTool,
+      get_review_status: getReviewStatusTool,
+      resolve_comment: resolveCommentTool,
+      add_reply: addReplyTool,
     },
 
     config: async (config) => {
