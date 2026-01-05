@@ -1,22 +1,12 @@
 import { actorAgent } from "./actor";
 import { housekeepingAgent } from "./housekeeping";
+import { AGENT_NAMES } from "./names";
 import { orchestratorAgent } from "./orchestrator";
 import { plannerAgent } from "./planner";
 import { readonlyOrchestratorAgent } from "./read-only";
 import { reflectorAgent } from "./reflector";
 import { reviewerAgent } from "./reviewer";
 import { scoutAgent } from "./scout";
-
-export const AGENT_NAMES = {
-  ORCHESTRATOR: "Zeus (Orchestrator)",
-  READ_ONLY_ORCHESTRATOR: "Hera (Read-only Orchestrator)",
-  SCOUT: "[Openfleet] Athena (Scout)",
-  PLANNER: "[Openfleet] Apollo (Planner)",
-  ACTOR: "[Openfleet] Hercules (Actor)",
-  REVIEWER: "[Openfleet] Chiron (Reviewer)",
-  REFLECTOR: "[Openfleet] Mnemosyne (Reflector)",
-  HOUSEKEEPING: "[Openfleet] Hermes (Housekeeping)",
-} as const;
 
 export const agents = {
   [AGENT_NAMES.ORCHESTRATOR]: orchestratorAgent,

@@ -1,8 +1,8 @@
 import type { AgentConfig } from "@opencode-ai/sdk";
 
-import { AGENT_NAMES } from ".";
 import { OPENFLEET_DIR, PATHS } from "../config";
 import { defaultModel } from "../models";
+import { AGENT_NAMES } from "./names";
 
 const SYSTEM_PROMPT = `You are Hercules, Primary Actor of the Openfleet.
 

@@ -1,10 +1,15 @@
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
 
 import { OPENFLEET_DIR } from "../config";
 import { logger } from "../logger";
 
-const TEMPLATES_DIR = path.join(__dirname, "..", "templates", ".openfleet");
+const TEMPLATES_DIR = path.join(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "templates",
+  ".openfleet",
+);
 
 export function initializeDirectories(): void {
   if (fs.existsSync(OPENFLEET_DIR)) {

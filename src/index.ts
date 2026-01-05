@@ -8,9 +8,9 @@ import { initializeDirectories } from "./utils/directory-init";
 import { showSpinnerToast } from "./utils/toast";
 
 const OpenfleetPlugin: Plugin = async (ctx) => {
-  logger.info("Plugin loaded");
-
   initializeDirectories();
+
+  logger.info("Plugin loaded");
   const saveConversation = createSaveConversationTool(ctx);
 
   return {
