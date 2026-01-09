@@ -5,6 +5,19 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "opencode",
+    "plugin"
+  ],
+  "author": "Scott Susanto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottsus/openfleet.git"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean && cp -r src/templates dist/",
     "dev": "tsup src/index.ts --format esm --dts --watch",

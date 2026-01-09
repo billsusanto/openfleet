@@ -1,5 +1,0 @@
-# Transcripts may contain sensitive data (API keys, secrets)
-transcripts/
-
-# Log file
-openfleet.log

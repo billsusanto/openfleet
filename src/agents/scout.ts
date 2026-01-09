@@ -12,7 +12,7 @@ Before starting any research, read these files in order:
 1. \`${PATHS.statusFile}\` - read this first
 2. Search \`${PATHS.lessons}/\` for topics related to your research area
 3. Search \`${PATHS.blunders}/\` for known pitfalls in this area
-4. If a task directory exists, check for existing \`research.md\`
+4. If a task directory exists, check for existing \`Research.md\`
 
 ## Mission
 
@@ -32,7 +32,7 @@ Some useful tools at your disposal:
 If it's not about a problem, perhaps it's implementing a new feature, also trace through the
 execution path of interest, so you'll know about all the files you need to work with, and there
 are no unknowns later. At this point you may have a potential proposal, though it's still in your
-mind. Use perplexity to confirm whether that solution is valid.
+mind. Use exa to confirm whether that solution is valid.
 
 ## Failure modes
 
@@ -42,7 +42,13 @@ file that later turns out to be critical will be our main failure mode here. On 
 creating a new functionality, when instead we should've been reusing/extending an existing one, is
 also a bad failure mode.
 
-Once you're done, save the task in \`${OPENFLEET_DIR}/stories/{story_name}/tasks/{task_name}/research.md\`.
+Once you're done, save findings to the appropriate location:
+- Story-level: \`${PATHS.stories}/{story_name}/Research.md\`
+- Task-level: \`${PATHS.stories}/{story_name}/tasks/{task_name}/Research.md\`
+- Branch-level: \`.../<task>/branches/{branch_name}/Research.md\`
+
+Check \`${PATHS.statusFile}\` for the exact path Zeus expects.
+
 The goal is to pass off our research findings to another engineer, who will then come up with an exhaustive
 plan to solve the current issue at hand. Strike a balance between completeness and brevity - don't just
 dump an entire plan, but rather highlight the key points the engineer needs to know.

@@ -4,28 +4,33 @@ import * as path from "path";
  * Directory Structure:
  *
  * .openfleet/                          # Project-local workspace
- * ├── status/
- * │   └── current.md                   # Anchor point - always read first
- * ├── sessions/                        # Conversation records (auto-generated)
- * │   └── YYYY-MM-DD/
- * │       └── NNN_topic-slug.md
- * ├── stories/                         # Work organized by story
- * │   ├── YYYY-WXX/                    # Week-based organization
- * │   │   └── <story-name>/
- * │   │       ├── README.md
- * │   │       └── tasks/
- * │   │           └── MM-DD_<task-name>/
- * │   └── unassigned/                  # Tasks without a story
- * ├── docs/
- * │   └── working/                     # Agent scratch space
- * ├── experience/                          # Learned knowledge
- * │   ├── Mnemosyne.md                 # Index + recent activity
+ * ├── status.md                        # Anchor point - always read first (gitignored)
+ * ├── stories/                         # Working tree (gitignored)
+ * │   └── <story-name>/
+ * │       ├── README.md
+ * │       ├── Research.md
+ * │       ├── HLD.md
+ * │       ├── LLD.md
+ * │       ├── Implementation.md
+ * │       └── tasks/
+ * │           └── <MM-DD_task-name>/
+ * │               ├── README.md
+ * │               ├── Research.md
+ * │               ├── HLD.md
+ * │               ├── LLD.md
+ * │               ├── Implementation.md
+ * │               └── branches/        # Recursive branches
+ * ├── docs/                            # Permanent only (committed)
+ * │   └── <story-name>.md              # Compressed learnings
+ * ├── experience/                      # Learned knowledge (committed)
+ * │   ├── Mnemosyne.md
  * │   ├── runbooks/
  * │   ├── troubleshooting/
  * │   ├── lessons/
  * │   └── blunders/
- * ├── standards/                       # Prescriptive guidelines
- * ├── reviews/                         # Human review artifacts
+ * ├── standards/                       # Prescriptive guidelines (committed)
+ * ├── sessions/                        # Conversation records (gitignored)
+ * ├── transcripts/                     # Legacy transcripts (gitignored)
  * └── openfleet.log
  */
 
@@ -34,13 +39,10 @@ export const OPENFLEET_DIR = path.join(process.cwd(), ".openfleet");
 export const PATHS = {
   agentsMd: path.join(process.cwd(), "AGENTS.md"),
   root: OPENFLEET_DIR,
-  status: path.join(OPENFLEET_DIR, "status"),
-  statusFile: path.join(OPENFLEET_DIR, "status", "current.md"),
+  statusFile: path.join(OPENFLEET_DIR, "status.md"),
   sessions: path.join(OPENFLEET_DIR, "sessions"),
   stories: path.join(OPENFLEET_DIR, "stories"),
-  unassigned: path.join(OPENFLEET_DIR, "stories", "unassigned"),
   docs: path.join(OPENFLEET_DIR, "docs"),
-  docsWorking: path.join(OPENFLEET_DIR, "docs", "working"),
   experience: path.join(OPENFLEET_DIR, "experience"),
   experienceIndex: path.join(OPENFLEET_DIR, "experience", "Mnemosyne.md"),
   runbooks: path.join(OPENFLEET_DIR, "experience", "runbooks"),

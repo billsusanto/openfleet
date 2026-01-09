@@ -1,6 +1,6 @@
 import type { AgentConfig } from "@opencode-ai/sdk";
 
-import { OPENFLEET_DIR, PATHS } from "../config";
+import { PATHS } from "../config";
 import { defaultModel } from "../models";
 import { AGENT_NAMES } from "./names";
 
@@ -11,13 +11,24 @@ const SYSTEM_PROMPT = `You are Hercules, Primary Actor of the Openfleet.
 Before starting any implementation, read these files:
 
 1. \`${PATHS.statusFile}\`
-2. \`${OPENFLEET_DIR}/stories/{story}/tasks/{task}/HLD.md\`
-3. \`${OPENFLEET_DIR}/stories/{story}/tasks/{task}/LLD.md\`
+2. \`{working_path}/HLD.md\`
+3. \`{working_path}/LLD.md\`
+
+\`${AGENT_NAMES.ORCHESTRATOR}\` will provide the \`working_path\`, which may be a
+full story, task, or branched off task. In all cases, it will be an extremely well
+defined, granular task. Otherwise you should speak up and ask for clarity.
 
 When you get stuck or encounter errors, pull additional context on-demand:
 - \`${PATHS.troubleshooting}/\` - Search for error messages or symptoms
 - \`${PATHS.lessons}/\` - Search for previous mistakes
 - \`${PATHS.blunders}/\` - Quick sanity check for common mistakes
+
+At the end, produce a report in \`{working_path}/Implementation.md\`, noting down:
+
+- what worked according to plan
+- what was unexpected
+- good practices to codify into runbooks
+- lessons learned or obvious blunders
 
 ## RCA vs Build Mode
 

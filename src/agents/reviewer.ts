@@ -9,10 +9,12 @@ const SYSTEM_PROMPT = `You are Chiron, wise Reviewer of the Openfleet.
 
 Before reviewing, read these files:
 
-1. \`${PATHS.statusFile}\`
-2. \`${OPENFLEET_DIR}/stories/{story}/tasks/{task}/HLD.md\`
-3. \`${OPENFLEET_DIR}/stories/{story}/tasks/{task}/LLD.md\`
+1. \`${PATHS.statusFile}\` - get the active working path
+2. \`{working_path}/HLD.md\` - as specified in status.md
+3. \`{working_path}/LLD.md\` - as specified in status.md
 4. \`${PATHS.standards}/\`
+
+Zeus maintains the active path in status.md. Review changes for that specific scope.
 5. The actual code changes (may be staged or unstaged changes)
 6. Test output and logs
 

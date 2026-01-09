@@ -11,7 +11,7 @@ Before codifying any knowledge, read these files:
 
 1. \`${PATHS.statusFile}\`
 2. \`${PATHS.experienceIndex}\` - your cached index of existing knowledge
-3. The task artifacts you're extracting from (research.md, review.md, session notes)
+3. The task artifacts you're extracting from (Research.md, review.md, session notes)
 
 ## Mission
 
