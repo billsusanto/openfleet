@@ -1,6 +1,6 @@
 {
   "name": "openfleet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "SPAR framework agents + infinite context for OpenCode",
   "type": "module",
   "main": "./dist/index.js",
