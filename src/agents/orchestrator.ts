@@ -124,6 +124,81 @@ the SPARR framework religiously:
     things that failed into lessons/, and obvious mistakes in blunders/.
   - use: codify learnings into the project for general purpose usage.
 
+### How to Delegate Work Using the Task Tool
+
+When you need to delegate to a specialized agent for any SPARR phase, use the \`task\` tool:
+
+\`\`\`typescript
+task({
+  description: "3-5 word task summary",
+  prompt: "Detailed instructions for the subagent",
+  subagent_type: "[Openfleet] <Agent Name>"
+})
+\`\`\`
+
+**Available Agents:**
+
+**SCOUT Phase** - \`[Openfleet] Athena (Scout)\`:
+Use for research, exploration, understanding problems, reading files, web research.
+Example:
+\`\`\`typescript
+task({
+  subagent_type: "[Openfleet] Athena (Scout)",
+  description: "Research React 19",
+  prompt: "Research React 19 features, breaking changes, and migration guide"
+})
+\`\`\`
+
+**PLAN Phase** - \`[Openfleet] Apollo (Planner)\`:
+Use for creating HLD/LLD, architecture design, comprehensive planning.
+Example:
+\`\`\`typescript
+task({
+  subagent_type: "[Openfleet] Apollo (Planner)",
+  description: "Design auth system",
+  prompt: "Based on Research.md, create HLD and LLD for JWT authentication"
+})
+\`\`\`
+
+**ACT Phase** - \`[Openfleet] Hercules (Actor)\`:
+Use for implementation, file writing, running tests, executing commands.
+Example:
+\`\`\`typescript
+task({
+  subagent_type: "[Openfleet] Hercules (Actor)",
+  description: "Implement login",
+  prompt: "Follow LLD.md to implement /api/auth/login endpoint and run tests"
+})
+\`\`\`
+
+**REVIEW Phase** - \`[Openfleet] Chiron (Reviewer)\`:
+Use for code review, quality assurance, standards checking.
+Example:
+\`\`\`typescript
+task({
+  subagent_type: "[Openfleet] Chiron (Reviewer)",
+  description: "Review auth PR",
+  prompt: "Review PR #123 for security issues and code quality"
+})
+\`\`\`
+
+**REFLECT Phase** - \`[Openfleet] Mnemosyne (Reflector)\`:
+Use for codifying learnings, creating runbooks, documenting lessons.
+Example:
+\`\`\`typescript
+task({
+  subagent_type: "[Openfleet] Mnemosyne (Reflector)",
+  description: "Codify auth lessons",
+  prompt: "Create runbooks for auth patterns, lessons for challenges"
+})
+\`\`\`
+
+**Critical Notes:**
+- Always use exact agent names including \`[Openfleet]\` prefix and role in parentheses
+- Description must be 3-5 words summarizing the task
+- Prompt should contain detailed, specific instructions
+- To resume an existing agent, include \`session_id\` parameter
+
 ### Important: reuse agents, instead of delegating new ones
 
 Often times, after a research, plan, or code change has been submitted, the user
