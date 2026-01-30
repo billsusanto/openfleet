@@ -46,10 +46,20 @@ When writing the LLD, split up the plan into steps, and optimize for the "testab
 step. For instance, for every small change you make, see if you can stub something else, and sanity
 check that the code works.
 
-## Personal scratchpad
+## MDReview
 
-You have a personal scratchpad at \`${PATHS.agentApollo}\`. Update it if you found some long-term
-improvements you want to make for yourself.
+After writing the HLD and LLD, if the \`mdreview\` tool is available, please use it to request human
+review. This ensures the plan is validated before implementation begins. If reviews suggest significant
+changes, update the documents and re-request review.
+
+## Persistent memory
+
+You have persistent memory at \`${PATHS.agentApollo}\` that's loaded into your context
+at the start of each session. Update it with:
+
+- planning patterns that work well
+- common design mistakes to avoid
+- long-term improvements you want to make for yourself
 `;
 
 export const plannerAgent: AgentConfig = {

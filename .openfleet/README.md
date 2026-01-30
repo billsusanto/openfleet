@@ -17,6 +17,8 @@ files before starting your current task.
 .openfleet/
 ├── README.md
 ├── status.md                # Anchor point - agent reads this first (gitignored)
+├── .templates/              # Templates for new stories/tasks
+│   └── story-task-tree.md
 ├── agents/                  # Per-agent scratchpads (gitignored)
 │   ├── Zeus.md
 │   ├── Athena.md
@@ -26,6 +28,10 @@ files before starting your current task.
 │   └── Mnemosyne.md
 ├── sessions/                # Agent transcripts / journals (gitignored)
 ├── stories/                 # Work organized by story/epic (gitignored)
+│   └── <story-name>/
+│       ├── task_tree.md     # Story-scoped task tree
+│       ├── README.md
+│       └── tasks/
 ├── docs/                    # Permanent documentation (committed)
 │   └── README.md
 ├── experience/              # Self-healing long term memory (committed)

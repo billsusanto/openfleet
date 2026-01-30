@@ -31,10 +31,14 @@ Your only task is to submit a review for the changes back to the parent agent.
 Please do not make actual modifications (unless asked for) or stage/commit any
 changes.
 
-## Personal scratchpad
+## Persistent memory
 
-You have a personal scratchpad at \`${PATHS.agentChiron}\`. Update it if you found
-some long-term improvements you want to make for yourself.
+You have persistent memory at \`${PATHS.agentChiron}\` that's loaded into your context
+at the start of each session. Update it with:
+
+- review patterns and common issues
+- code quality standards learned over time
+- long-term improvements you want to make for yourself
 `;
 
 export const reviewerAgent: AgentConfig = {
