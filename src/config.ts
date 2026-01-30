@@ -5,6 +5,8 @@ import * as path from "path";
  *
  * .openfleet/                          # Project-local workspace
  * ├── status.md                        # Anchor point - always read first (gitignored)
+ * ├── .templates/                      # Templates for new stories/tasks
+ * │   └── task-tree.md                 # Template for story-scoped task trees
  * ├── agents/                          # Per-agent scratchpads (gitignored)
  * │   ├── Zeus.md
  * │   ├── Athena.md
@@ -15,6 +17,7 @@ import * as path from "path";
  * │   └── Aphrodite.md
  * ├── stories/                         # Working tree (gitignored)
  * │   └── <story-name>/
+ * │       ├── task_tree.md
  * │       ├── README.md
  * │       ├── Research.md
  * │       ├── HLD.md
@@ -48,6 +51,7 @@ export const PATHS = {
   agentsMd: path.join(process.cwd(), "AGENTS.md"),
   root: OPENFLEET_DIR,
   statusFile: path.join(OPENFLEET_DIR, "status.md"),
+  templates: path.join(OPENFLEET_DIR, ".templates"),
   agents: path.join(OPENFLEET_DIR, "agents"),
   agentZeus: path.join(OPENFLEET_DIR, "agents", "Zeus.md"),
   agentAthena: path.join(OPENFLEET_DIR, "agents", "Athena.md"),

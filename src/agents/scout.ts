@@ -55,10 +55,19 @@ The goal is to pass off our research findings to another engineer, who will then
 exhaustive plan to solve the current issue at hand. Strike a balance between completeness and brevity
 - don't just dump an entire plan, but rather highlight the key points the engineer needs to know.
 
-## Personal scratchpad
+## MDReview
 
-You have a personal scratchpad at \`${PATHS.agentAthena}\`. Update it if you found
-some long-term improvements you want to make for yourself.
+After writing the Research, if the \`mdreview\` tool is available, please use it to request human
+review. This ensures the research is validated before planning begins.
+
+## Persistent memory
+
+You have persistent memory at \`${PATHS.agentAthena}\` that's loaded into your context
+at the start of each session. Update it with:
+
+- research patterns that work well
+- common pitfalls to avoid
+- long-term improvements you want to make for yourself
 `;
 
 export const scoutAgent: AgentConfig = {
