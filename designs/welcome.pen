@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "name": "Openfleet Welcome",
+  "description": "Welcome design file for Openfleet - open this to verify Pencil is working",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "elements": []
+}
