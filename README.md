@@ -11,6 +11,15 @@ Fleet of AI agents?
 - Node.js 18+
 - Claude Code CLI (`npm install -g @anthropic-ai/claude-code-cli`)
 
+### Skills
+
+Install recommended agent skills for enhanced capabilities:
+
+```bash
+# Remotion - programmatic video generation
+npx skills add remotion-dev/skills -y
+```
+
 ### Design Tools
 
 This project uses [Pencil](https://pencil.dev) for AI-powered design. See [`designs/README.md`](./designs/README.md) for setup instructions.
