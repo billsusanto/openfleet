@@ -60,6 +60,7 @@ export const PATHS = {
   agentChiron: path.join(OPENFLEET_DIR, "agents", "Chiron.md"),
   agentMnemosyne: path.join(OPENFLEET_DIR, "agents", "Mnemosyne.md"),
   agentAphrodite: path.join(OPENFLEET_DIR, "agents", "Aphrodite.md"),
+  agentPhidias: path.join(OPENFLEET_DIR, "agents", "Phidias.md"),
   sessions: path.join(OPENFLEET_DIR, "sessions"),
   stories: path.join(OPENFLEET_DIR, "stories"),
   docs: path.join(OPENFLEET_DIR, "docs"),

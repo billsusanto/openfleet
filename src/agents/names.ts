@@ -8,4 +8,5 @@ export const AGENT_NAMES = {
   REFLECTOR: "[Openfleet] Mnemosyne (Reflector)",
   HOUSEKEEPING: "[Openfleet] Hermes (Housekeeping)",
   BROWSER: "[Openfleet] Aphrodite (Browser)",
+  DESIGNER: "[Openfleet] Phidias (Designer)",
 } as const;

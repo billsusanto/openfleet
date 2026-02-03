@@ -1,5 +1,6 @@
 import { actorAgent } from "./actor";
 import { aphroditeAgent } from "./aphrodite";
+import { designerAgent } from "./designer";
 import { housekeepingAgent } from "./housekeeping";
 import { AGENT_NAMES } from "./names";
 import { orchestratorAgent } from "./orchestrator";
@@ -19,6 +20,7 @@ export const agents = {
   [AGENT_NAMES.REFLECTOR]: reflectorAgent,
   [AGENT_NAMES.HOUSEKEEPING]: housekeepingAgent,
   [AGENT_NAMES.BROWSER]: aphroditeAgent,
+  [AGENT_NAMES.DESIGNER]: designerAgent,
 };
 
 export function configureAgents(config: { agent?: Record<string, unknown> }) {
