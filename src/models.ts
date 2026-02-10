@@ -1,12 +1,12 @@
 export const models = {
   bedrock: {
     sonnet: "amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0",
-    opus: "amazon-bedrock/anthropic.claude-opus-4-5-20251101-v1:0",
+    opus: "amazon-bedrock/anthropic.claude-opus-4-6-v1",
     haiku: "amazon-bedrock/anthropic.claude-haiku-4-5-20251001-v1:0",
   },
   anthropic: {
     sonnet: "anthropic/claude-sonnet-4-5",
-    opus: "anthropic/claude-opus-4-5",
+    opus: "anthropic/claude-opus-4-6",
     haiku: "anthropic/claude-haiku-4-5",
   },
   openai: {
