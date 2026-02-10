@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.71.2",
-    "@opencode-ai/plugin": "^1.0.191",
-    "@opencode-ai/sdk": "^1.0.191"
+    "@opencode-ai/plugin": "^1.1.53",
+    "@opencode-ai/sdk": "^1.1.53"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",

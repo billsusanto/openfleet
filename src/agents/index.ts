@@ -35,5 +35,7 @@ export function configureAgents(config: { agent?: Record<string, unknown> }) {
   config.agent = {
     ...nonOpenfleetAgents,
     ...agents,
+    build: { disable: true },
+    plan: { disable: true },
   };
 }
